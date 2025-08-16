@@ -18,15 +18,14 @@ def create_database():
         cursor = cnx.cursor()
 
         # SQL query to create the database if it doesn't exist
-        database_name = "alx_book_store"
-        query = f"CREATE DATABASE IF NOT EXISTS {database_name}"
+        query = "CREATE DATABASE IF NOT EXISTS alx_book_store"
         
         # Execute the query
         cursor.execute(query)
         
         # If no errors occurred, the database was created or already existed.
         # Since we cannot use SELECT or SHOW to check, we assume success.
-        print(f"Database '{database_name}' created successfully!")
+        print(f"Database 'alx_book_store' created successfully!")
         
     except mysql.connector.Error as err:
         # Handle different types of MySQL errors
