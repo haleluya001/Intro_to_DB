@@ -25,7 +25,7 @@ def create_database():
         
         # If no errors occurred, the database was created or already existed.
         # Since we cannot use SELECT or SHOW to check, we assume success.
-        print(f"Database 'alx_book_store' created successfully!")
+        print("Database 'alx_book_store' created successfully!")
         
     except mysql.connector.Error as err:
         # Handle different types of MySQL errors
