@@ -1,3 +1,5 @@
+# MySQLServer.py
+
 import mysql.connector
 from mysql.connector import errorcode
 
@@ -35,14 +37,13 @@ def create_database():
             print("Database does not exist")
         else:
             # Print a generic error message for any other connection issues
-            print(f"Failed to connect to the database: {err}")
+            print("Failed to connect to the database.")
     finally:
         # Ensure the cursor and connection are closed to free up resources
         if 'cursor' in locals() and cursor is not None:
             cursor.close()
         if 'cnx' in locals() and cnx is not None:
             cnx.close()
-            print("Connection closed.")
 
 # Call the function to run the script
 if __name__ == "__main__":
